@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>مين بيلعب؟</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marhey:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Montserrat:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow reading column, Arabic first, English mirror below; paper look of the game */
+:root{
+  --paper:#efe4cc; --deep:#e4d5b4; --ink:#2a2118; --soft:#6b5d4c; --red:#c8432b; --green:#5a7a3a; --line:#2a211833;
+  --display:"Marhey","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --body:"IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --latin:"Montserrat",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1f1a14;--deep:#2b241b;--ink:#efe4cc;--soft:#b4a68f;--red:#e0654c;--green:#8fb065;--line:#efe4cc2e;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1f1a14;--deep:#2b241b;--ink:#efe4cc;--soft:#b4a68f;--red:#e0654c;--green:#8fb065;--line:#efe4cc2e;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.85}
+.wrap{max-width:680px;margin:0 auto;padding-inline:20px;padding-block:40px 64px;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.mark{width:64px;height:64px;border-radius:18px;background:var(--red);border:2.5px solid var(--ink);display:grid;place-items:center;transform:rotate(-5deg);color:#f4ecd8;font-family:var(--display);font-size:34px;line-height:1}
+h1{font-family:var(--display);font-size:2.1rem;margin:8px 0 0;line-height:1.3}
+.tag{color:var(--soft);margin:0}
+nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;padding:6px 14px;border:1.6px solid var(--ink);border-radius:12px;background:var(--deep)}
+nav a:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+section{display:flex;flex-direction:column;gap:10px}
+h2{font-family:var(--display);font-size:1.5rem;margin:0;line-height:1.4;text-wrap:balance}
+h3{font-size:1.02rem;font-weight:600;margin:10px 0 0}
+p,ul{margin:0}
+ul{padding-inline-start:22px}
+li+li{margin-top:4px}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 16px;background:var(--deep);border:1.8px solid var(--ink);border-radius:16px}
+.mail code{font-family:var(--latin);font-weight:700;font-size:15px;direction:ltr;user-select:all;word-break:break-all}
+.mail button{font:600 13px var(--body);color:var(--paper);background:var(--green);border:1.6px solid var(--ink);border-radius:10px;padding:5px 12px;cursor:pointer}
+.date{color:var(--soft);font-size:13px}
+hr{border:0;border-top:1.5px dashed var(--line);margin:0}
+.en{direction:ltr;text-align:left;font-family:var(--latin);font-size:15px;line-height:1.7}
+.en h2{font-family:var(--latin);font-weight:700;font-size:1.3rem}
+.en h3{font-family:var(--latin);font-weight:700;font-size:.98rem}
+footer{text-align:center;color:var(--soft);font-family:var(--latin);font-size:12px}
+</style>
+
+<div class="wrap" dir="rtl">
+  <header>
+    <div class="mark" aria-hidden="true">؟</div>
+    <h1>مين بيلعب؟</h1>
+    <p class="tag">ألعاب سهرة للشلة والعايلة</p>
+    <nav><a href="#support">الدعم</a><a href="#privacy">سياسة الخصوصية</a><a href="#en">English</a></nav>
+  </header>
+
+  <section id="support">
+    <h2>الدعم والتواصل</h2>
+    <p>عندك مشكلة، فكرة، أو ملاحظة؟ راسلنا ونرد عليك بأقرب وقت.</p>
+    <div class="mail"><code id="em">mutazmaltamim@icloud.com</code><button type="button" id="cp">انسخ</button></div>
+    <h3>اشتريت النسخة الكاملة وما انفتحت؟</h3>
+    <p>من صفحة النسخة الكاملة داخل اللعبة اضغط «استرجاع المشتريات»، وتأكد إنك داخل بنفس حساب Apple اللي اشتريت فيه.</p>
+    <h3>كيف أعرضها على التلفزيون؟</h3>
+    <p>افتح مركز التحكم في الجوال، اضغط «انعكاس الشاشة» واختار التلفزيون أو Apple TV. اللعبة تعرض شاشة خاصة للتلفزيون تلقائياً.</p>
+  </section>
+
+  <hr>
+
+  <section id="privacy">
+    <h2>سياسة الخصوصية</h2>
+    <p class="date">آخر تحديث: ١٠ أكتوبر ٢٠٢٦</p>
+    <p>نحترم خصوصيتك. هذي الصفحة توضح وش البيانات اللي تتعامل معها لعبة «مين بيلعب؟».</p>
+    <h3>بيانات ما نجمعها</h3>
+    <p>اللعبة ما فيها حسابات ولا تسجيل دخول. أسماء اللاعبين والنقاط والإعدادات تنحفظ على جوالك بس، وما توصلنا.</p>
+    <h3>الإعلانات</h3>
+    <p>نستخدم Google AdMob لعرض إعلانات اختيارية تشوفها مقابل فتح محتوى مؤقت. AdMob قد يجمع معرّف الإعلانات في الجهاز، وموقع تقريبي من عنوان الـ IP، وبيانات تفاعل وأعطال، عشان يعرض الإعلانات ويقيسها. ما يُستخدم معرّف الإعلانات للتتبع إلا إذا وافقت في رسالة Apple «السماح بالتتبع»، وتقدر تغيّر رأيك أي وقت من إعدادات الجوال ← الخصوصية والأمان ← التتبع. التفاصيل في <a href="https://policies.google.com/technologies/partner-sites" style="color:inherit">سياسة Google</a>.</p>
+    <h3>المشتريات</h3>
+    <p>الشراء يتم عن طريق Apple بالكامل، وما نشوف أي بيانات دفع.</p>
+    <h3>المراسلة</h3>
+    <p>إذا راسلتنا بالإيميل، نستخدم إيميلك ورسالتك للرد عليك بس.</p>
+    <h3>الأطفال</h3>
+    <p>اللعبة مناسبة للجميع لكنها غير موجهة للأطفال تحت ١٣ سنة بشكل خاص، وما نجمع بياناتهم عن قصد.</p>
+    <h3>التغييرات</h3>
+    <p>إذا تغيّرت هذي السياسة نحدّث التاريخ فوق. لأي سؤال راسلنا على الإيميل اللي فوق.</p>
+  </section>
+
+  <hr>
+
+  <div id="en" class="en" dir="ltr">
+    <section>
+      <h2>Support</h2>
+      <p>Questions, ideas or problems? Email <strong>mutazmaltamim@icloud.com</strong> and we'll get back to you.</p>
+      <h3>Bought the full version but it's still locked?</h3>
+      <p>Open the full version screen in the game and tap "Restore purchases" while signed in with the same Apple Account.</p>
+      <h3>Playing on a TV</h3>
+      <p>Open Control Center, tap Screen Mirroring and pick your TV or Apple TV. The game shows its own TV screen automatically.</p>
+    </section>
+    <hr style="margin:28px 0">
+    <section>
+      <h2>Privacy Policy</h2>
+      <p class="date">Last updated: October 10, 2026</p>
+      <p><strong>No accounts.</strong> Player names, scores and settings are stored only on your device and never sent to us.</p>
+      <p><strong>Ads.</strong> We use Google AdMob for optional rewarded ads. AdMob may collect the device advertising identifier, approximate location derived from IP address, interaction and diagnostic data to serve and measure ads. The advertising identifier is used for tracking only if you allow it in Apple's App Tracking Transparency prompt; you can change this anytime in Settings › Privacy &amp; Security › Tracking. See <a href="https://policies.google.com/technologies/partner-sites" style="color:inherit">Google's policy</a>.</p>
+      <p><strong>Purchases</strong> are handled entirely by Apple; we never see payment details.</p>
+      <p><strong>Email.</strong> If you contact us, we use your address and message only to reply.</p>
+      <p><strong>Children.</strong> The game is suitable for all ages but is not directed at children under 13, and we do not knowingly collect their data.</p>
+      <p><strong>Changes</strong> to this policy will update the date above.</p>
+    </section>
+  </div>
+
+  <footer>Created and designed by Mutaz © 2026</footer>
+</div>
+<script>
+document.getElementById('cp').addEventListener('click',e=>{const b=e.currentTarget,t='mutazmaltamim@icloud.com';
+ const done=()=>{b.textContent='تم النسخ';setTimeout(()=>b.textContent='انسخ',1600)};
+ try{navigator.clipboard.writeText(t).then(done,()=>sel())}catch(_){sel()}
+ function sel(){const r=document.createRange();r.selectNodeContents(document.getElementById('em'));const s=getSelection();s.removeAllRanges();s.addRange(r)}});
+</script>
+
+</body>
+</html>
